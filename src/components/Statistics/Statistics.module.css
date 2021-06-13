@@ -1,0 +1,41 @@
+.list {
+   list-style: none;
+  font-family: "Lucida Sans";
+  width: 200px;
+  margin: 0 auto;
+}
+
+.list li {
+  position: relative;
+  padding: 20px 0 20px 40px;
+  color: #D29D25;
+  font-variant: small-caps;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.list li:before {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4F5151;
+  content: "";
+  left: 0;
+  transition: .3s ease-in-out;
+  top: 27px;
+}
+
+.list li:after {
+  position: absolute;
+  border-left: 1px dotted #4F5151;
+  width: 1px;
+  bottom: -12px;
+  content: "";
+  left: 3px;
+  top: 48px;
+}
+
+.list li:hover:before{box-shadow: 0 0 0 10px rgba(0,0,0,.2)}
+
+.list li:last-child:after {content: none;}
